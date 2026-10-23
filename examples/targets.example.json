@@ -1,0 +1,19 @@
+{
+  "targets": {
+    "local-api": {
+      "transport": "local",
+      "layout": "api",
+      "root": "/targets/local",
+      "system_roots": ["/defaults/BBL"],
+      "writable": false
+    },
+    "workstation": {
+      "transport": "ssh",
+      "host": "slicer-workstation",
+      "remote_target": "desktop",
+      "remote_config": "/etc/bambustudio-mcp/targets.json",
+      "layout": "desktop",
+      "writable": false
+    }
+  }
+}

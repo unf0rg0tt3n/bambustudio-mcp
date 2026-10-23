@@ -1,4 +1,14 @@
 .venv/
+.venv-test/
+.env
+.env.*
+*.pem
+*.key
+.ssh/
+/private/
+/targets.json
+/targets.local.json
+/compose.override.yaml
 __pycache__/
 .pytest_cache/
 *.egg-info/

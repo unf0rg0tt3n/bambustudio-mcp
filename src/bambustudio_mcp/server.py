@@ -28,6 +28,8 @@ INSTRUCTIONS = f"""Prepare saved BambuStudio projects; never control a printer. 
 def create_server(service=None):
     service = service or Service()
     mcp = FastMCP("BambuStudio", instructions=INSTRUCTIONS)
+    from .preset_tools import register
+    register(mcp)
     read = ToolAnnotations(readOnlyHint=True, destructiveHint=False, openWorldHint=False)
     write = ToolAnnotations(readOnlyHint=False, destructiveHint=False, openWorldHint=False)
 

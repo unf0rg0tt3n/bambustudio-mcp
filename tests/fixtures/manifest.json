@@ -1,0 +1,18 @@
+{
+  "upstream": "https://github.com/bambulab/BambuStudio",
+  "revision": "f977235e6d736c4c0b650520ac5a5b72cbfe9244",
+  "license": "AGPL-3.0",
+  "files": {
+    "process/0.20mm Standard @BBL X1C.json": "e4d3f211b6ef87e9612c96f3ac2d18413e0610fff7eeb815a76420344a3b0a19",
+    "process/fdm_process_common.json": "5c16ba3f17a36cc8f01743245e221426b3cdceac7cc367758d6f48d86b63d8ef",
+    "process/fdm_process_single_common.json": "05b38ac1318e465e817978b36da51754f928da0172738a20bb3a8d4a69eb4769",
+    "process/fdm_process_single_0.20.json": "cdda8d56d67f62a0faa892cb6efc605ebb5c745bf742f6ead4daaeb6627c182a",
+    "filament/Bambu Support For PLA-PETG @BBL X1C.json": "ce97750db953dbde866b9524a3cd2cac3bd0bcbca6844671e537f495916380cc",
+    "filament/fdm_filament_pla.json": "670d21ea6bdf1cd4b0a2bfddc743612ffd896cd6e5dbe767c25d2c4165c49a30",
+    "filament/Generic PETG HF @base.json": "d37ebcd9ec3a1fd8e5d0c61f7f115489eaccd8a229ea06ed3de3e1afd248046e",
+    "filament/Bambu Support For PLA-PETG @base.json": "dc0c7cb4e7e01fee56825e9f6c9d7424802d29bbf010fb121b76676d4e5af2a7",
+    "filament/fdm_filament_pet.json": "3ed1b36367fe6df800103a9deaaa036f9d79c7afda3f3a17514dff23aa96c7d8",
+    "filament/fdm_filament_common.json": "8c7105b7d59a28f600c43a946f067b8b4d707b9711c0bf6b88e9166e48878548",
+    "filament/Generic PETG HF @BBL X1C.json": "00da60766cd7c139e4bb715fa9eb2a3f02a31fcea304eaaa3993e4b73f287853"
+  }
+}

@@ -1,0 +1,23 @@
+services:
+  mcp:
+    build: .
+    image: bambustudio-mcp:local
+    stdin_open: true
+    read_only: true
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    user: "${MCP_UID:-65532}:${MCP_GID:-65532}"
+    environment:
+      BAMBUSTUDIO_TARGETS_CONFIG: /etc/mcp/targets.json
+      BAMBUSTUDIO_WORKSPACE: /workspace
+    volumes:
+      # All source paths must exist. targets.json is private and outside git.
+      - ${TARGETS_CONFIG:?set TARGETS_CONFIG}:/etc/mcp/targets.json:ro
+      - ${PRESET_ROOT:?set PRESET_ROOT}:/targets/local:rw
+      - ${BAMBU_DEFAULTS:?set BAMBU_DEFAULTS}:/defaults/BBL:ro
+      # Optional SSH: uncomment only after provisioning pinned known_hosts/config/key.
+      # - ${SSH_DIRECTORY}:/home/mcp/.ssh:ro
+    tmpfs:
+      - /workspace:uid=${MCP_UID:-65532},gid=${MCP_GID:-65532},mode=0700
+      - /tmp:mode=1777
+    # Stdio service, no unauthenticated TCP/HTTP port. Use compose run --rm -T mcp.

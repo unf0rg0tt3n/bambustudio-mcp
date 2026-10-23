@@ -20,6 +20,21 @@ Start with an STL model or a saved 3MF project. Export the configured result as 
 
 [Quick start](#-quick-start) · [Example requests](#-give-your-assistant-a-print-brief) · [Documentation](#-go-deeper) · [Evidence](docs/verification.md)
 
+## Reusable process and filament presets (central, multi-target)
+
+This fork adds real on-disk Bambu JSON presets, **not just 3MF project edits**.
+`list_targets`, `list_presets`, `read_preset`, `derive_preset`, `validate_preset`,
+`create_preset`, `update_preset`, `list_preset_backups`, and `restore_preset`
+manage explicit allowlisted local/mounted or SSH targets. Both process/print
+settings and filament/material presets are supported. No new printer-control,
+print dispatch, arbitrary-shell, or arbitrary-host tool is provided.
+
+See **[preset setup, layouts, safety, examples and limits](docs/reusable-presets.md)**.
+Writes default to dry-run and targets default to read-only. Private target JSON,
+SSH configuration and keys belong outside this repository. The Docker image can
+manage presets without a slicer binary; upstream slicing tools still need one.
+`compose.example.yaml` is a stdio launch example, not an unauthenticated web service.
+
 ## ✨ What it does for your print
 
 Ask for a stronger bracket, fewer supports, or a cleaner visible face. Give the assistant your material, load directions, and priorities.
